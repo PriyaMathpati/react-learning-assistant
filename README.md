@@ -1,16 +1,102 @@
-# React + Vite
+# React Learning Assistant AI Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive AI-powered chatbot built using React.js and Node.js to help users learn React.js and JavaScript concepts in simple language, with explanations and code examples.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- AI-powered answers to React.js and JavaScript questions
+- Responsive chat interface
+- Reusable React functional components
+- State management using React Hooks
+- Loading indicator while generating responses
+- Error handling for API failures
+- Chat history stored in browser localStorage
+- Markdown formatting for AI responses
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend:** React.js, JavaScript, HTML, CSS, Vite
 
-## Expanding the Oxlint configuration
+**Backend:** Node.js, Express.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+**AI Integration:** Google Gemini API
+
+**Other:** Git, GitHub, React Markdown
+
+## Project Structure
+
+```text
+react-learning-assistant/
+├── server/
+│   └── server.js
+├── src/
+│   ├── components/
+│   │   ├── ChatInput.jsx
+│   │   ├── ChatMessage.jsx
+│   │   └── ChatWindow.jsx
+│   ├── services/
+│   │   └── openaiService.js
+│   ├── App.jsx
+│   └── App.css
+├── .env
+└── package.json
+```
+
+## How to Run the Project
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/PriyaMathpati/react-learning-assistant.git
+cd react-learning-assistant
+```
+
+**2. Install dependencies**
+
+```bash
+npm install
+```
+
+**3. Configure the Gemini API key**
+
+Create a `.env` file in the project root:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+Never upload your real API key to GitHub.
+
+**4. Start the backend server**
+
+```bash
+node server/server.js
+```
+
+**5. Start the React frontend in another terminal**
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed by Vite, usually `http://localhost:5173/`.
+
+## React Concepts Demonstrated
+
+- Functional components and props
+- `useState` and `useEffect`
+- Event handling
+- Conditional rendering
+- API integration using `fetch`
+- Asynchronous programming with `async/await`
+- Error handling and loading states
+- Browser localStorage
+- Responsive CSS design
+
+## AI Integration Note
+
+The application uses the Google Gemini API to generate responses. Gemini was selected as an alternative AI provider after OpenAI API credits were unavailable.
+
+## Project Purpose
+
+Developed as an internship assignment to demonstrate React.js fundamentals, AI API integration, responsive user interface development, and GitHub version control.
